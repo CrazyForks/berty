@@ -34,6 +34,7 @@ jobs:
         run: |
           asdf plugin add golang
           asdf install golang
+          . ~/.asdf/plugins/golang/set-env.bash
 
       - name: Setup golangci-lint
         run: |
