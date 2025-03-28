@@ -217,14 +217,14 @@ jobs:
       # upload arifacts
       #
       - name: upload artifact (master)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: github.ref == 'refs/heads/master'
         with:
           name: "bench-master"
           path: go/pprof_html
 
       - name: upload artifact (PR)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: github.event_name == 'pull_request'
         with:
           name: "bench-${{ github.event.pull_request.number  }}"
