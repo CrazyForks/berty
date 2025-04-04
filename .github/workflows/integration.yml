@@ -53,7 +53,7 @@ jobs:
           filename: .github/workflows/utils/variables.json
 
       - name: Setup asdf
-        uses: asdf-vm/actions/setup@v3.0.2
+        uses: asdf-vm/actions/setup@master
         with:
           asdf_version: 0.15.0
 
@@ -147,7 +147,7 @@ jobs:
           filename: .github/workflows/utils/variables.json
 
       - name: Setup asdf
-        uses: asdf-vm/actions/setup@v3.0.2
+        uses: asdf-vm/actions/setup@master
         with:
           asdf_version: 0.15.0
 
