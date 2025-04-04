@@ -92,13 +92,16 @@ jobs:
         with:
           filename: .github/workflows/utils/variables.json
 
+      - name: Setup go
+        uses: actions/setup-go@v5
+
       - name: Setup asdf
         if: ${{ !matrix.selfhosted }}
-        uses: asdf-vm/actions/setup@master
-        with:
-          asdf_version: 0.15.0
+        run: |
+          go install github.com/asdf-vm/asdf/cmd/asdf@v0.16.7
+          echo "$HOME/.asdf/shims" >> "$GITHUB_PATH"
 
-      - name: Setup go
+      - name: Setup asdf go version
         run: |
           asdf plugin add golang || ${{ matrix.selfhosted }}
           asdf install golang
