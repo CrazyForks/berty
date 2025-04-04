@@ -84,6 +84,8 @@ jobs:
 
       - name: Setup asdf
         uses: asdf-vm/actions/setup@v3.0.2
+        with:
+          asdf_version: 0.15.0
 
       - name: Setup go
         run: |
@@ -151,6 +153,8 @@ jobs:
 
       - name: Setup asdf
         uses: asdf-vm/actions/setup@v3.0.2
+        with:
+          asdf_version: 0.15.0
 
       - name: Setup node
         working-directory: js
@@ -166,8 +170,8 @@ jobs:
           echo "go_version=$(asdf current golang | xargs | cut -d ' ' -f 2)" >> $GITHUB_ENV
 
       - name: Cleanup js gen
-      - run: make gen.clean
         working-directory: js
+        run: make gen.clean
 
       - name: Cache node modules
         uses: actions/cache@v4

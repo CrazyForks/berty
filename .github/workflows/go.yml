@@ -29,6 +29,8 @@ jobs:
 
       - name: Setup asdf
         uses: asdf-vm/actions/setup@v3.0.2
+        with:
+          asdf_version: 0.15.0
 
       - name: Setup golang
         run: |
@@ -68,6 +70,8 @@ jobs:
 
       - name: Setup asdf
         uses: asdf-vm/actions/setup@v3.0.2
+        with:
+          asdf_version: 0.15.0
 
       - name: Setup go
         run: |
@@ -119,6 +123,8 @@ jobs:
 
       - name: Setup asdf
         uses: asdf-vm/actions/setup@v3.0.2
+        with:
+          asdf_version: 0.15.0
 
       - name: Setup go
         run: |
@@ -240,6 +246,8 @@ jobs:
 
       - name: Setup asdf
         uses: asdf-vm/actions/setup@v3.0.2
+        with:
+          asdf_version: 0.15.0
 
       - name: Setup go
         run: |
