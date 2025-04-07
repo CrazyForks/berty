@@ -92,22 +92,17 @@ jobs:
         with:
           filename: .github/workflows/utils/variables.json
 
-      - name: Setup go
-        uses: actions/setup-go@v5
-        with:
-          go-version: 1.23
-
       - name: Setup asdf
         if: ${{ !matrix.selfhosted }}
-        run: |
-          go install github.com/asdf-vm/asdf/cmd/asdf@v0.16.7
-          echo "$HOME/.asdf/shims" >> "$GITHUB_PATH"
+        uses: ynab/asdf-action@v1.2
+        with:
+          version: 0.16.2
 
-      - name: Setup asdf go version
+      - name: Setup go
         run: |
           asdf plugin add golang || ${{ matrix.selfhosted }}
           asdf install golang
-          echo "go_version=$(asdf current golang | xargs | cut -d ' ' -f 2)" >> $GITHUB_ENV
+          echo "go_version=$(asdf current golang | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
 
       - name: Setup ruby
         working-directory: js
@@ -117,21 +112,21 @@ jobs:
         run: |
           asdf plugin add ruby || ${{ matrix.selfhosted }}
           asdf install ruby
-          echo "ruby_version=$(asdf current ruby | xargs | cut -d ' ' -f 2)" >> $GITHUB_ENV
+          echo "ruby_version=$(asdf current ruby | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
 
       - name: Setup xcodegen
         working-directory: js
         run: |
           asdf plugin add xcodegen || ${{ matrix.selfhosted }}
           asdf install xcodegen
-          echo "xcodegen_version=$(asdf current xcodegen | xargs | cut -d ' ' -f 2)" >> $GITHUB_ENV
+          echo "xcodegen_version=$(asdf current xcodegen | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
 
       - name: Setup node
         working-directory: js
         run: |
           asdf plugin add nodejs || ${{ matrix.selfhosted }}
           asdf install nodejs
-          echo "node_version=$(asdf current nodejs | xargs | cut -d ' ' -f 2)" >> $GITHUB_ENV
+          echo "node_version=$(asdf current nodejs | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
 
       - name: Setup yarn
         working-directory: js
