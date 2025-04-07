@@ -96,7 +96,7 @@ jobs:
         if: ${{ !matrix.selfhosted }}
         uses: ynab/asdf-action@v1.2
         with:
-          version: 0.16.2
+          version: 0.16.7
 
       - name: Setup go
         run: |

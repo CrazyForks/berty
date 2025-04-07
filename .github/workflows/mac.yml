@@ -91,22 +91,22 @@ jobs:
 
       - name: Setup asdf
         if: ${{ !matrix.selfhosted }}
-        uses: asdf-vm/actions/setup@master
+        uses: ynab/asdf-action@v1.2
         with:
-          asdf_version: 0.15.0
+          version: 0.16.7
 
       - name: Setup go
         run: |
           asdf plugin add golang || ${{ matrix.selfhosted }}
           asdf install golang
-          echo "go_version=$(asdf current golang | xargs | cut -d ' ' -f 2)" >> $GITHUB_ENV
+          echo "go_version=$(asdf current golang | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
 
       - name: Setup node
         working-directory: js
         run: |
           asdf plugin add nodejs || ${{ matrix.selfhosted }}
           asdf install nodejs
-          echo "node_version=$(asdf current nodejs | xargs | cut -d ' ' -f 2)" >> $GITHUB_ENV
+          echo "node_version=$(asdf current nodejs | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
 
       - name: Setup yarn
         working-directory: js

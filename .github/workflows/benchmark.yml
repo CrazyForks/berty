@@ -25,9 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup asdf
-        uses: asdf-vm/actions/setup@master
+        uses: ynab/asdf-action@v1.2
         with:
-          asdf_version: 0.15.0
+          version: 0.16.7
 
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
@@ -42,7 +42,7 @@ jobs:
           asdf plugin add golang
           asdf install golang
           asdf reshim golang
-          echo "go_version=$(asdf current golang | xargs | cut -d ' ' -f 2)" >> $GITHUB_ENV
+          echo "go_version=$(asdf current golang | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
           go install golang.org/x/perf/cmd/benchstat@latest
           asdf reshim golang
 
@@ -76,7 +76,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           asdf install golang
-          echo "go_version=$(asdf current golang | xargs | cut -d ' ' -f 2)" >> $GITHUB_ENV
+          echo "go_version=$(asdf current golang | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
           go install golang.org/x/perf/cmd/benchstat@latest
           asdf reshim golang
 
