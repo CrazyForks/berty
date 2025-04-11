@@ -66,7 +66,7 @@ jobs:
   gen-go-and-docs:
     name: Generate go protobuf and docs
     runs-on: ubuntu-latest
-    container: bertytech/protoc:31
+    container: bertytech/protoc:32
     steps:
       - name: Checkout
         uses: actions/checkout@v3
