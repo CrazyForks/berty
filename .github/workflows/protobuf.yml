@@ -66,10 +66,10 @@ jobs:
   gen-go-and-docs:
     name: Generate go protobuf and docs
     runs-on: ubuntu-latest
-    container: bertytech/protoc:31
+    container: bertytech/protoc:32
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Unshallow
         run: git fetch --prune --unshallow
@@ -141,10 +141,10 @@ jobs:
   gen-js:
     name: Generate js protobuf
     runs-on: ubuntu-latest
-    container: bertytech/protoc:31
+    container: bertytech/protoc:32
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Load variables from file
         uses: antifree/json-to-variables@v1.0.1
