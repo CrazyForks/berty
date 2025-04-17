@@ -19,7 +19,7 @@ RUN     go install -mod=readonly \
 
 # runtime
 FROM    golang:1.22-alpine
-RUN     apk --no-cache add git openssh make protobuf gcc libc-dev nodejs npm yarn sudo perl-utils tar sed grep bash \
+RUN     apk --no-cache add git openssh make protobuf gcc libc-dev nodejs npm yarn sudo perl-utils tar sed grep \
  &&     mkdir -p /.cache/go-build \
  &&     chmod -R 777 /.cache \
  &&     npm install -g eclint

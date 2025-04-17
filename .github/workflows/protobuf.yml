@@ -66,7 +66,7 @@ jobs:
   gen-go-and-docs:
     name: Generate go protobuf and docs
     runs-on: ubuntu-latest
-    container: bertytech/protoc:32
+    container: bertytech/protoc:31
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -83,9 +83,9 @@ jobs:
           filename: .github/workflows/utils/variables.json
 
       - name: Setup asdf
-        uses: ynab/asdf-action@v1.2
+        uses: asdf-vm/actions/setup@9cd779f40fe38688dd19505ccbc4eaaf018b44e7
         with:
-          version: 0.16.7
+          asdf_version: 0.16.7
 
       - name: Setup go
         run: |
@@ -152,9 +152,9 @@ jobs:
           filename: .github/workflows/utils/variables.json
 
       - name: Setup asdf
-        uses: ynab/asdf-action@v1.2
+        uses: asdf-vm/actions/setup@9cd779f40fe38688dd19505ccbc4eaaf018b44e7
         with:
-          version: 0.16.7
+          asdf_version: 0.16.7
 
       - name: Setup node
         working-directory: js
