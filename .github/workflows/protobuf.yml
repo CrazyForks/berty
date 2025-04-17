@@ -166,6 +166,12 @@ jobs:
           asdf install nodejs
           echo "node_version=$(asdf current nodejs | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
 
+      - name: Setup yarn
+        working-directory: js
+        run: |
+          asdf plugin add yarn
+          asdf install yarn
+
       - name: Setup go
         run: |
           asdf plugin add golang
