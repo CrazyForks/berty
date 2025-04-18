@@ -15,11 +15,12 @@ RUN     go install -mod=readonly \
           github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway \
           github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger \
           github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
+          github.com/srikrsna/protoc-gen-gotag \
           golang.org/x/tools/cmd/goimports
 
 # runtime
 FROM    golang:1.22-alpine
-RUN     apk --no-cache add git openssh make protobuf gcc libc-dev nodejs npm yarn sudo perl-utils tar sed grep bash curl yq \
+RUN     apk --no-cache add git openssh make protobuf gcc libc-dev nodejs npm yarn sudo perl-utils tar gpg gpg-agent sed grep bash curl yq \
  &&     mkdir -p /.cache/go-build \
  &&     chmod -R 777 /.cache \
  &&     npm install -g eclint
