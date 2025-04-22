@@ -197,7 +197,6 @@ jobs:
           restore-keys: ${{ runner.os }}-go-${{ env.go_version }}-${{ env.json_cache-versions_go }}-
 
       - name: Fetch node modules
-        # FIXME: find a way of only downloading the required packages or install them directly in the bertytech/protoc image
         working-directory: js
         run: make node_modules
 
