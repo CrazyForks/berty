@@ -90,6 +90,7 @@ func verifyRunningLeakDetection(t *testing.T) {
 		goleak.IgnoreTopFunction("net.(*netFD).connect.func2"),                                  // FIXME - many libraries used this code
 		goleak.IgnoreTopFunction("sync.runtime_Semacquire"),                                     // the closing routine has big timeout
 		goleak.IgnoreTopFunction("sync.runtime_SemacquireMutex"),                                // sometimes happening on CI, need more investigation
+		goleak.IgnoreTopFunction("net.(*Resolver).lookupIPAddr"),
 	)
 }
 
