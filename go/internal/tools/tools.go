@@ -27,14 +27,14 @@ import (
 	_ "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway"
 	// required by protoc
 	_ "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger"
-	// required by protoc
-	_ "github.com/srikrsna/protoc-gen-gotag"
 	// keep switching between disappearing and indirect
 	_ "github.com/kr/pretty"
 	// required by Makefile
 	_ "github.com/mdomke/git-semver/v5"
 	// required by protoc
 	_ "github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc"
+	// required by protoc
+	_ "github.com/srikrsna/protoc-gen-gotag"
 	// required by Makefile
 	_ "github.com/tailscale/depaware"
 	// required by gomobile
