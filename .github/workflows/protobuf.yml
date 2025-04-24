@@ -163,7 +163,7 @@ jobs:
         working-directory: js
         run: |
           asdf plugin add nodejs
-          asdf install nodejs
+          ASDF_NODEJS_FORCE_COMPILE=1 asdf install nodejs
           echo "node_version=$(asdf current nodejs | xargs | cut -d ' ' -f 6)" >> $GITHUB_ENV
 
       - name: Setup yarn
