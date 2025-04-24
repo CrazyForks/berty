@@ -55,7 +55,7 @@ jobs:
       - name: Setup asdf
         uses: asdf-vm/actions/setup@9cd779f40fe38688dd19505ccbc4eaaf018b44e7
         with:
-          asdf_version: 0.15.0
+          asdf_version: 0.16.7
 
       - name: Setup go
         run: |
@@ -149,7 +149,7 @@ jobs:
       - name: Setup asdf
         uses: asdf-vm/actions/setup@9cd779f40fe38688dd19505ccbc4eaaf018b44e7
         with:
-          asdf_version: 0.15.0
+          asdf_version: 0.16.7
 
       - name: Setup go
         run: |
