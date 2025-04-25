@@ -149,6 +149,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Mark repository as safe
+        run: git config --global --add safe.directory $GITHUB_WORKSPACE
+
       - name: Load variables from file
         uses: antifree/json-to-variables@v1.0.1
         with:
