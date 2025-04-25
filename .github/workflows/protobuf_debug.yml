@@ -81,6 +81,11 @@ jobs:
         with:
           asdf_version: 0.16.7
 
+      - name: Setup yq
+        run: |
+          asdf plugin add yq
+          asdf install yq
+
       - name: Setup node
         working-directory: js
         run: |
