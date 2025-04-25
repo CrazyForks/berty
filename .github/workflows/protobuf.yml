@@ -132,7 +132,9 @@ jobs:
         run: make openapi.prepare
 
       - name: Setup apiary
-        run: apk --no-cache add ruby-dev g++ && gem install apiaryio
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends ruby-dev g++ && gem install apiaryio
 
       - name: Upload API docs to apiary.io
         env:
