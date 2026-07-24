@@ -79,7 +79,7 @@ require (
 	golang.org/x/tools v0.45.0
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da
 	google.golang.org/api v0.169.0
-	google.golang.org/grpc v1.80.0
+	google.golang.org/grpc v1.82.1
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.5.1
 	google.golang.org/protobuf v1.36.11
 	gopkg.in/square/go-jose.v2 v2.6.0
@@ -191,7 +191,7 @@ require (
 	github.com/eclipse/paho.mqtt.golang v1.5.1 // indirect
 	github.com/elgris/jsondiff v0.0.0-20160530203242-765b5c24c302 // indirect
 	github.com/emicklei/proto v1.6.13 // indirect
-	github.com/envoyproxy/protoc-gen-validate v1.3.0 // indirect
+	github.com/envoyproxy/protoc-gen-validate v1.3.3 // indirect
 	github.com/facebookgo/atomicfile v0.0.0-20151019160806-2de1f203e7d5 // indirect
 	github.com/fatih/structtag v1.2.0 // indirect
 	github.com/felixge/fgprof v0.9.4 // indirect
@@ -325,7 +325,7 @@ require (
 	github.com/libp2p/go-reuseport v0.4.0 // indirect
 	github.com/libp2p/go-yamux/v5 v5.0.1 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
-	github.com/lyft/protoc-gen-star/v2 v2.0.4-0.20230330145011-496ad1ac90a4 // indirect
+	github.com/lyft/protoc-gen-star/v2 v2.0.4 // indirect
 	github.com/marten-seemann/tcp v0.0.0-20210406111302-dfbc87cc63fd // indirect
 	github.com/maruel/circular v0.0.0-20200815005550-36e533b830e9 // indirect
 	github.com/mattn/go-colorable v0.1.14 // indirect
@@ -402,7 +402,7 @@ require (
 	github.com/sirupsen/logrus v1.9.4 // indirect
 	github.com/slok/go-http-metrics v0.13.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
-	github.com/spf13/afero v1.10.0 // indirect
+	github.com/spf13/afero v1.15.0 // indirect
 	github.com/spf13/cobra v1.10.2 // indirect
 	github.com/spf13/pflag v1.0.10 // indirect
 	github.com/srwiley/oksvg v0.0.0-20221011165216-be6e8873101c // indirect
